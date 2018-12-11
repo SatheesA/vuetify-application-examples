@@ -16,7 +16,8 @@ Vue.use(Vuetify, {
     warning: colors.yellow.base,
     info: colors.blue.base,
     success: colors.green.base
-  }
+  },
+  iconfont: "mdi"
 });
 
 /* eslint-disable no-new */
