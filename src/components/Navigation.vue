@@ -9,7 +9,7 @@
 <v-list-tile
           v-for="item in items"
           :key="item.title"
-          v-on-click=""
+          :to="item.url"
         >
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
@@ -29,8 +29,8 @@ export default {
     return {
       drawer: true,
       items: [
-        { title: "Home", icon: "dashboard" },
-        { title: "Layout", icon: "question_answer" }
+        { title: "Home", icon: "dashboard", url:'/'},
+        { title: "Layouts", icon: "web", url: '/layouts' }
       ],
       right: null
     };

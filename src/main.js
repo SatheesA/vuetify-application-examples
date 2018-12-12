@@ -5,8 +5,15 @@ import App from "./App";
 import Vuetify from "vuetify";
 import "vuetify/dist/vuetify.min.css";
 import colors from "vuetify/es5/util/colors";
+import DefaultLayout from "./layouts/DefaultLayout";
+import EmptyLayout from "./layouts/EmptyLayout";
+import router from "./router";
 
 Vue.config.productionTip = false;
+
+Vue.component("empty-layout", EmptyLayout);
+Vue.component("default-layout", DefaultLayout);
+
 Vue.use(Vuetify, {
   theme: {
     primary: colors.blueGrey.darken2,
@@ -23,6 +30,7 @@ Vue.use(Vuetify, {
 /* eslint-disable no-new */
 new Vue({
   el: "#app",
+  router,
   components: { App },
   template: "<App/>"
 });

@@ -1,19 +1,14 @@
 <template>
-  <component :is="layout"> <router-view /> </component>
+  <div><Navigation /> <slot /></div>
 </template>
 
 <script>
-import Navigation from "./components/Navigation";
+import Navigation from "../components/Navigation";
 
 export default {
   name: "App",
   components: {
     Navigation
-  },
-  computed: {
-    layout() {
-      return (this.$route.meta.layout || "default") + "-layout";
-    }
   }
 };
 </script>
